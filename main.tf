@@ -12,6 +12,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm" {
   dimensions = {
     FunctionName = var.name
   }
+  treat_missing_data = "notBreaching"
   period = var.period
   evaluation_periods = var.evaluation_periods
   datapoints_to_alarm = var.datapoints_to_alarm
