@@ -8,7 +8,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm" {
   threshold = 0
   metric_name = "Errors"
   namespace = "AWS/Lambda"
-  statistic = "SampleCount"
+  statistic = "Maximum"
   dimensions = {
     FunctionName = var.name
   }
